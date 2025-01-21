@@ -14,6 +14,7 @@ function Counter() {
 
   //Для упрощения делаем деструктуризацию
   const [counter, setCounter] = useState(0);
+  // let count = 0;
 
   //Шаг 3 - создаём функции, которые будут менять состояние
   const onPlusClick = () => {
@@ -22,17 +23,27 @@ function Counter() {
     //2 вариант - передача в вызов setCounter функции callback, если новое значение состояния,
     //должно быть вычислено на основе предыдущего значения
     //из функции необходимо вернуть новое значение состояния
-    setCounter((prevState) => prevState + 1);
+    setCounter((prevValue) => {
+      return prevValue + 1;
+    });
+    // console.log("Onplus event");
+    // count++;
+    // console.log("count in onPlusClick Function", count);
   };
+
+  console.log("counter in Counter Component", counter);
 
   const onMinusClick = () => {
     setCounter((prevValue) => prevValue - 1);
+    // console.log("OnMinus event");
+    // count--;
+    // console.log("count in onMinusClick Function", count);
   };
 
   return (
     <div className="counter-wrapper">
       <div className="button-wrapper">
-        <Button name="-" type="button" onClick={onMinusClick}/>
+        <Button name="-" type="button" onClick={onMinusClick} />
       </div>
       <div className="result-container">{counter}</div>
       <div className="button-wrapper">

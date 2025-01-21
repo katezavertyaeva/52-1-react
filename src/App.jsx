@@ -12,6 +12,9 @@ import Lesson04 from "./lessons/Lesson04/Lesson04";
 // import Homework02 from "./homeworks/Homework02/Homework02";
 // import Homework03 from "./homeworks/Homework03/Homework03";
 
+// Consultations
+import Counsultation_02 from "./consultations/Counsultation_02/Consultation_02";
+
 function App() {
   return (
     <div className="app">
@@ -25,7 +28,9 @@ function App() {
       {/* <Lesson03 /> */}
       {/* <Homework03/> */}
       {/* ---Topic: functions, hooks(useState) */}
-      <Lesson04 />
+      {/* <Lesson04 /> */}
+      {/* Consultations */}
+      <Counsultation_02 />
     </div>
   );
 }
